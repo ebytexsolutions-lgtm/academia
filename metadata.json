@@ -1,0 +1,6 @@
+{
+  "name": "UET Academy Lahore - Portal & Verification",
+  "description": "Official UET Academy Lahore portal for professional skill courses, instant CNIC and mobile certificate verification, and administrative CMS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

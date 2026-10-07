@@ -74,68 +74,68 @@ export const CertificateView: React.FC<CertificateViewProps> = ({ certificate, o
       {/* Printable Certificate Frame */}
       <div 
         ref={printRef}
-        className="relative bg-gradient-to-b from-[#FFFDF9] to-[#FAF6EE] text-slate-900 p-6 sm:p-12 rounded-2xl shadow-2xl border-8 border-[#B8860B]/40 print:m-0 print:p-8 print:border-4 print:shadow-none print:w-full print:rounded-none overflow-hidden"
+        className="print-area relative bg-gradient-to-b from-[#FFFDF9] to-[#FAF6EE] text-slate-900 p-3 sm:p-8 md:p-12 rounded-2xl shadow-2xl border-4 sm:border-8 border-[#B8860B]/40 print:m-0 print:p-8 print:border-4 print:shadow-none print:w-full print:rounded-none overflow-hidden max-w-full"
       >
         {/* Subtle Watermark Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.035] pointer-events-none select-none">
-          <div className="w-96 h-96 rounded-full border-8 border-red-950 flex items-center justify-center">
-            <GraduationCap className="w-64 h-64 text-red-950" />
+          <div className="w-64 h-64 sm:w-96 sm:h-96 rounded-full border-8 border-red-950 flex items-center justify-center">
+            <GraduationCap className="w-48 h-48 sm:w-64 sm:h-64 text-red-950" />
           </div>
         </div>
 
         {/* Ornate Inner Border */}
-        <div className="relative border-2 border-[#B8860B]/60 p-6 sm:p-10 rounded-xl">
+        <div className="relative border-2 border-[#B8860B]/60 p-3 sm:p-6 md:p-10 rounded-xl">
           {/* Corner Flourishes */}
-          <div className="absolute top-2 left-2 w-6 h-6 border-t-2 border-l-2 border-[#800000]"></div>
-          <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-[#800000]"></div>
-          <div className="absolute bottom-2 left-2 w-6 h-6 border-b-2 border-l-2 border-[#800000]"></div>
-          <div className="absolute bottom-2 right-2 w-6 h-6 border-b-2 border-r-2 border-[#800000]"></div>
+          <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-4 h-4 sm:w-6 sm:h-6 border-t-2 border-l-2 border-[#800000]"></div>
+          <div className="absolute top-1 right-1 sm:top-2 sm:right-2 w-4 h-4 sm:w-6 sm:h-6 border-t-2 border-r-2 border-[#800000]"></div>
+          <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 w-4 h-4 sm:w-6 sm:h-6 border-b-2 border-l-2 border-[#800000]"></div>
+          <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-4 h-4 sm:w-6 sm:h-6 border-b-2 border-r-2 border-[#800000]"></div>
 
           {/* Certificate Header */}
-          <div className="text-center space-y-2 mb-8">
+          <div className="text-center space-y-2 mb-6 sm:mb-8">
             {/* Logo Emblem */}
-            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-red-900 to-red-950 text-amber-300 shadow-md border-2 border-amber-400 p-2 mb-2">
+            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-red-900 to-red-950 text-amber-300 shadow-md border-2 border-amber-400 p-2 mb-1">
               <div className="w-full h-full rounded-full border border-amber-300/40 flex flex-col items-center justify-center">
-                <GraduationCap className="w-7 h-7 sm:w-9 sm:h-9 text-amber-300" />
+                <GraduationCap className="w-6 h-6 sm:w-9 sm:h-9 text-amber-300" />
                 <span className="text-[7px] font-bold text-amber-200">1921</span>
               </div>
             </div>
 
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-950 font-serif uppercase">
+            <h1 className="text-base sm:text-2xl md:text-3xl font-extrabold tracking-tight text-red-950 font-serif uppercase px-1">
               University of Engineering and Technology Lahore
             </h1>
-            <p className="text-xs sm:text-sm font-semibold tracking-wider text-amber-900 uppercase">
+            <p className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider text-amber-900 uppercase">
               UET Academy • Department of Architectural Engineering & Design
             </p>
-            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mt-2"></div>
+            <div className="w-24 sm:w-32 h-0.5 bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mt-2"></div>
           </div>
 
           {/* Title of Award */}
-          <div className="text-center my-6">
-            <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-slate-500 bg-amber-100/70 px-4 py-1 rounded-full border border-amber-200">
+          <div className="text-center my-4 sm:my-6">
+            <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-slate-500 bg-amber-100/70 px-3 sm:px-4 py-1 rounded-full border border-amber-200">
               Certificate of Professional Completion
             </span>
-            <p className="text-xs text-slate-600 mt-4 italic font-serif">
+            <p className="text-xs text-slate-600 mt-3 sm:mt-4 italic font-serif">
               This is to solemnly certify that
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-red-950 tracking-tight mt-1 font-serif underline decoration-amber-500/40 underline-offset-8">
+            <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-red-950 tracking-tight mt-1 font-serif underline decoration-amber-500/40 underline-offset-4 sm:underline-offset-8">
               {certificate.studentName}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-700 mt-3">
+            <p className="text-xs sm:text-sm text-slate-700 mt-2 sm:mt-3">
               Son / Daughter of <strong className="text-slate-900 font-semibold">{certificate.fatherName}</strong>
             </p>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-[11px] sm:text-xs text-slate-500 mt-1 break-words">
               CNIC: <span className="font-mono font-medium text-slate-800">{certificate.cnic}</span> • Reg No: <span className="font-mono font-medium text-slate-800">{certificate.registrationNo}</span>
             </p>
           </div>
 
           {/* Course Details */}
-          <div className="text-center my-6 max-w-2xl mx-auto space-y-2">
+          <div className="text-center my-4 sm:my-6 max-w-2xl mx-auto space-y-2">
             <p className="text-xs sm:text-sm text-slate-600 italic font-serif">
               has satisfactorily completed the rigorous professional training and laboratory assessment in
             </p>
-            <div className="p-3 sm:p-4 rounded-xl bg-amber-50/80 border border-amber-200/80 shadow-xs">
-              <h3 className="text-lg sm:text-2xl font-bold text-red-950">
+            <div className="p-2.5 sm:p-4 rounded-xl bg-amber-50/80 border border-amber-200/80 shadow-xs">
+              <h3 className="text-base sm:text-2xl font-bold text-red-950">
                 {certificate.courseTitle}
               </h3>
             </div>
@@ -145,54 +145,54 @@ export const CertificateView: React.FC<CertificateViewProps> = ({ certificate, o
           </div>
 
           {/* Grade & Performance Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 my-6 text-xs">
-            <div className="px-3.5 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 font-semibold flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-emerald-700" />
-              <span>Evaluation Grade: <strong className="text-emerald-950">{certificate.grade}</strong></span>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-4 sm:my-6 text-xs">
+            <div className="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 font-semibold flex items-center gap-1.5 text-[11px] sm:text-xs">
+              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-700" />
+              <span>Grade: <strong className="text-emerald-950">{certificate.grade}</strong></span>
             </div>
             {certificate.marksPercentage && (
-              <div className="px-3.5 py-1.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 font-semibold">
+              <div className="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-950 font-semibold text-[11px] sm:text-xs">
                 Score: <strong>{certificate.marksPercentage}%</strong>
               </div>
             )}
-            <div className="px-3.5 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-semibold">
+            <div className="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-800 font-semibold text-[11px] sm:text-xs">
               Issue Date: <strong>{certificate.issueDate}</strong>
             </div>
           </div>
 
           {/* Footer Signatures and Verification QR */}
-          <div className="mt-12 pt-8 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-3 items-end gap-6 text-center">
+          <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-3 items-end gap-6 text-center">
             {/* Signature 1 */}
             <div className="space-y-1">
-              <div className="h-10 flex items-center justify-center">
-                <span className="font-serif italic text-red-900 text-lg font-bold">Kashif Manzoor</span>
+              <div className="h-8 sm:h-10 flex items-center justify-center">
+                <span className="font-serif italic text-red-900 text-base sm:text-lg font-bold">Kashif Manzoor</span>
               </div>
-              <div className="w-40 h-0.5 bg-slate-400 mx-auto"></div>
-              <p className="text-xs font-bold text-slate-900">Director, UET Academy</p>
-              <p className="text-[10px] text-slate-500">UET Lahore</p>
+              <div className="w-32 sm:w-40 h-0.5 bg-slate-400 mx-auto"></div>
+              <p className="text-[11px] sm:text-xs font-bold text-slate-900">Director, UET Academy</p>
+              <p className="text-[9px] sm:text-[10px] text-slate-500">UET Lahore</p>
             </div>
 
             {/* Official Seal / QR Verification Box */}
-            <div className="flex flex-col items-center justify-center space-y-1">
-              <div className="p-2 bg-white rounded-lg border-2 border-dashed border-amber-400 shadow-xs flex flex-col items-center">
-                <QrCode className="w-12 h-12 text-slate-800" />
+            <div className="flex flex-col items-center justify-center space-y-1 my-2 sm:my-0">
+              <div className="p-1.5 sm:p-2 bg-white rounded-lg border-2 border-dashed border-amber-400 shadow-xs flex flex-col items-center">
+                <QrCode className="w-10 h-10 sm:w-12 sm:h-12 text-slate-800" />
                 <span className="text-[8px] font-mono font-bold text-slate-600 mt-0.5">
                   ID: {certificate.certificateNo}
                 </span>
               </div>
-              <span className="text-[9px] uppercase tracking-wider font-bold text-emerald-700 flex items-center gap-1">
+              <span className="text-[8px] sm:text-[9px] uppercase tracking-wider font-bold text-emerald-700 flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-emerald-600" /> Authentic UET Record
               </span>
             </div>
 
             {/* Signature 2 */}
             <div className="space-y-1">
-              <div className="h-10 flex items-center justify-center">
-                <span className="font-serif italic text-red-900 text-lg font-bold">Chairman Office</span>
+              <div className="h-8 sm:h-10 flex items-center justify-center">
+                <span className="font-serif italic text-red-900 text-base sm:text-lg font-bold">Chairman Office</span>
               </div>
-              <div className="w-40 h-0.5 bg-slate-400 mx-auto"></div>
-              <p className="text-xs font-bold text-slate-900">Chairman Department</p>
-              <p className="text-[10px] text-slate-500">Architectural Engg. & Design</p>
+              <div className="w-32 sm:w-40 h-0.5 bg-slate-400 mx-auto"></div>
+              <p className="text-[11px] sm:text-xs font-bold text-slate-900">Chairman Department</p>
+              <p className="text-[9px] sm:text-[10px] text-slate-500">Architectural Engg. & Design</p>
             </div>
           </div>
         </div>

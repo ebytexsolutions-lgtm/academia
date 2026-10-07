@@ -514,8 +514,12 @@ export const AdminPage: React.FC = () => {
             </div>
 
             {/* Certificates Table */}
-            <div className="overflow-x-auto rounded-xl border border-slate-200">
-              <table className="w-full text-left text-xs">
+            <div>
+              <span className="block sm:hidden text-[10px] text-slate-500 mb-1.5 font-medium">
+                ↔ Scroll horizontally on mobile to view full records & actions
+              </span>
+              <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <table className="w-full text-left text-xs min-w-[640px]">
                 <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] tracking-wider border-b border-slate-200">
                   <tr>
                     <th className="p-3">Student Name</th>
@@ -583,7 +587,8 @@ export const AdminPage: React.FC = () => {
               </table>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
         {/* ================= TAB 2: COURSES MANAGEMENT ================= */}
         {activeTab === 'courses' && (
@@ -888,8 +893,12 @@ export const AdminPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="overflow-x-auto rounded-xl border border-slate-200">
-              <table className="w-full text-left text-xs">
+            <div>
+              <span className="block sm:hidden text-[10px] text-slate-500 mb-1.5 font-medium">
+                ↔ Scroll horizontally on mobile to view candidate status & details
+              </span>
+              <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <table className="w-full text-left text-xs min-w-[640px]">
                 <thead className="bg-slate-50 text-slate-600 font-bold uppercase text-[10px] tracking-wider border-b border-slate-200">
                   <tr>
                     <th className="p-3">App ID</th>
@@ -950,7 +959,8 @@ export const AdminPage: React.FC = () => {
               </table>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
         {/* ================= TAB 5: NOTICES MANAGEMENT ================= */}
         {activeTab === 'notices' && (

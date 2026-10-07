@@ -70,19 +70,19 @@ export const EnrollmentModal: React.FC<EnrollmentModalProps> = ({ course, isOpen
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="relative bg-white w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-fadeIn my-8">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
+      <div className="relative bg-white w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-fadeIn my-4 sm:my-8 max-h-[95vh] flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white p-5 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white p-4 sm:p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center shrink-0">
               <GraduationCap className="w-6 h-6 text-amber-300" />
             </div>
             <div>
-              <h3 className="font-extrabold text-base sm:text-lg">
+              <h3 className="font-extrabold text-sm sm:text-lg">
                 UET Academy Online Admission
               </h3>
-              <p className="text-xs text-amber-200">
+              <p className="text-[11px] sm:text-xs text-amber-200">
                 Official Application Form • Spring 2026 Batch
               </p>
             </div>
